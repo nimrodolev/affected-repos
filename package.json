@@ -1,0 +1,27 @@
+{
+  "name": "affected-repos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build src/index.js -o dist"  
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nimrodolev/affected-repos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nimrodolev/affected-repos/issues"
+  },
+  "homepage": "https://github.com/nimrodolev/affected-repos#readme",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.31.1"
+  }
+}

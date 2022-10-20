@@ -1,0 +1,13 @@
+name: 'Affected Repositories Labeler'
+description: 'Label issues with affected repositories based on PR references'
+author: 'Nimrod Dolev'
+inputs:
+  github-token:
+    description: 'GitHub access token'
+    default: '${{ github.token }}'
+outputs:
+  issues:
+    description: 'Labels applied'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
