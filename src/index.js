@@ -3,7 +3,7 @@ const github = require('@actions/github');
 
 async function run() {
   try {
-    const token = core.getInput("github-token'");
+    const token = core.getInput("github-token");
     const client = github.getOctokit(token);
     const app = new App(config, client);
     await app.handleEvent();
