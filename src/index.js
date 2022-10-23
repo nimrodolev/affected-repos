@@ -4,6 +4,12 @@ const github = require('@actions/github');
 async function run() {
   try {
     const token = core.getInput("github-token");
+    if (token) {
+      core.info(`Has token ${token[0]}...`);
+    }
+    else {
+      core.info("No token");
+    }
     const client = github.getOctokit(token);
     const app = new App(config, client);
     await app.handleEvent();
